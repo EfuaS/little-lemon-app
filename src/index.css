@@ -15,4 +15,5 @@ code {
 .flex-spread-out {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }

@@ -1,5 +1,12 @@
 import React from "react";
+import HeroSection from "./HeroSection";
+import HighlightsSction from "./HighlightsSction";
 
 export default function Main() {
-  return <div>Main</div>;
+  return (
+    <main>
+      <HeroSection />
+      <HighlightsSction />
+    </main>
+  );
 }

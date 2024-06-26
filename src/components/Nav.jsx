@@ -3,7 +3,7 @@ import React from "react";
 export default function Nav() {
   return (
     <nav>
-      <ul className="flex-spread-out">
+      <ul className="flex-spread-out ">
         <li>
           <a>Home </a>
         </li>

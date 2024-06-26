@@ -4,8 +4,8 @@ import Nav from "./Nav";
 
 export default function Header() {
   return (
-    <header className="flex-spread-out">
-      <img src={logo} alt="logo" />
+    <header className="flex-spread-out App-header">
+      <img src={logo} alt="logo" className="App-logo" />
       <Nav />
     </header>
   );
