@@ -9,8 +9,12 @@ export default function HighlightsSction() {
         <button>Online Menu</button>
       </div>
       <div
-        style={{ flexWrap: "wrap", gap: "10px" }}
-        className="flex-spread-out"
+        style={{
+          flexWrap: "wrap",
+          gap: "10px",
+          display: "flex",
+          justifyContent: "center",
+        }}
       >
         <SpecialsCard title="Greek Salad" price="500.00" />
         <SpecialsCard title="Steak" price="800.00" />
