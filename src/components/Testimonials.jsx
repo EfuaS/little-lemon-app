@@ -1,6 +1,7 @@
 import React from "react";
 import TestimonialsCard from "./TestimonialsCard";
 
+const names = ["John", "Tobias", "April", "Joyce"];
 export default function Testimonials() {
   return (
     <div
@@ -11,8 +12,8 @@ export default function Testimonials() {
         justifyContent: "center",
       }}
     >
-      {[1, 2, 3, 4].map((client) => (
-        <TestimonialsCard client={client} />
+      {[1, 2, 3, 4].map((client, index) => (
+        <TestimonialsCard rating={client} name={names[index]} />
       ))}
     </div>
   );

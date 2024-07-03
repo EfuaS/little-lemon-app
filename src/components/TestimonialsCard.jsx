@@ -1,9 +1,9 @@
 import React from "react";
 
-export default function TestimonialsCard({ client }) {
+export default function TestimonialsCard({ rating, name }) {
   return (
     <div className="testimonialsCardStyle">
-      <p>Rating</p>
+      <p>Rating: {rating}</p>
       <div
         style={{
           display: "flex",
@@ -13,13 +13,13 @@ export default function TestimonialsCard({ client }) {
         }}
       >
         <img
-          src="https://picsum.photos/id/128/200/300"
+          src={`https://picsum.photos/id/${rating}/200/300`}
           alt="avatar"
           className="avatarStyle"
         />
-        <p>Name</p>
+        <p>{name}</p>
       </div>
-      <p>Review:</p>
+      <p>Review: " Best food on the planet"</p>
     </div>
   );
 }
