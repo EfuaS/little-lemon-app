@@ -1,10 +1,8 @@
-import React, { useEffect, useState } from "react";
-import { fetchAPI } from "../api/booking-api";
+import React from "react";
 import { Formik } from "formik";
 import * as Yup from "yup";
 
 export default function BookingForm(props) {
-  const [availableTimes, setavailableTimes] = useState([]);
   const [formData, setformData] = React.useState({
     date: "",
     guests: 0,
@@ -13,14 +11,9 @@ export default function BookingForm(props) {
   });
 
   function handleFormSubmission(formData) {
-    console.log(formData);
     props.triggerSubmit(formData);
     props.passFormData(formData);
   }
-
-  useEffect(() => {
-    setavailableTimes(fetchAPI(new Date()));
-  }, []);
 
   return (
     <div>
@@ -73,7 +66,7 @@ export default function BookingForm(props) {
               id="res-time "
             >
               <option value={""}>Choose</option>
-              {availableTimes.map((time, index) => (
+              {props.availableTimes.map((time, index) => (
                 <option value={time} key={index}>
                   {time}
                 </option>
